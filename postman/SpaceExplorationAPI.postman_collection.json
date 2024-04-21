@@ -1,0 +1,387 @@
+{
+	"info": {
+		"_postman_id": "4d00eec0-7e4c-433e-807c-285cb005faa8",
+		"name": "SpaceExplorationAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13660521"
+	},
+	"item": [
+		{
+			"name": "Space Missions",
+			"item": [
+				{
+					"name": "Create a Spacecraft",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Mars Rover Mission\",\r\n  \"missionType\": \"Exploration\",\r\n  \"status\": \"Planned\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/spaceMissions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"spaceMissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve a Single Spacecraft by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/spaceMissions/6624be5145af5623979aea8e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"spaceMissions",
+								"6624be5145af5623979aea8e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve All Spacecraft",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/spaceMissions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"spaceMissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Space Mission",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"status\": \"Active\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/spaceMissions/6624bee745af5623979aea94",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"spaceMissions",
+								"6624bee745af5623979aea94"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Space Mission",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/spaceMissions/6624be5145af5623979aea8e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"spaceMissions",
+								"6624be5145af5623979aea8e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Spacecraft",
+			"item": [
+				{
+					"name": "Create a Spacecraft",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"SpaceX Falcon 9\",\r\n  \"manufacturer\": \"SpaceX\",\r\n  \"launchDate\": \"2024-01-22\",\r\n  \"type\": \"Orbiter\",\r\n  \"status\": \"Operational\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/spacecraft",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"spacecraft"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve All Spacecraft",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/spacecraft",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"spacecraft"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve a Single Spacecraft by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/spacecraft/6624e193ad0c17857558f501",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"spacecraft",
+								"6624e193ad0c17857558f501"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Spacecraft",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"status\": \"Retired\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/spacecraft/6624e193ad0c17857558f501",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"spacecraft",
+								"6624e193ad0c17857558f501"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Spacecraft",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Celestial Bodies",
+			"item": [
+				{
+					"name": "Create a Celestial Body",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Exoplanet Kepler\",\r\n  \"type\": \"Exoplanet\",\r\n  \"discoveredBy\": \"Kepler Telescope\",\r\n  \"discoveryDate\": \"2024-02-15\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/celestialBodies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"celestialBodies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve All Celestial Bodies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/celestialBodies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"celestialBodies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve a Single Celestial Body by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/celestialBodies/6624c2b701050142052f1840",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"celestialBodies",
+								"6624c2b701050142052f1840"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Celestial Body",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"discoveryDate\": \"2024-02-20\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/celestialBodies/6624c2b701050142052f1840",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"celestialBodies",
+								"6624c2b701050142052f1840"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Spacecraft",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/celestialBodies/6624c2b701050142052f1840",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"celestialBodies",
+								"6624c2b701050142052f1840"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
